@@ -1,0 +1,269 @@
+\documentclass[final]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{multicol}
+\usepackage{ragged2e}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{grffile}
+\mode<presentation>{\usetheme{CambridgeUSPOL}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+% \usepackage{polski}
+\usepackage{graphicx}
+\usepackage{array,booktabs,tabularx}
+\usepackage{epstopdf}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colortbl}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+
+% rysunki
+\usepackage{tikz}
+\usepackage{ifthen}
+\usepackage{xxcolor}
+\usetikzlibrary{arrows}
+\usetikzlibrary[topaths]
+\usetikzlibrary{decorations.pathreplacing}
+%\usepackage{times}\usefonttheme{professionalfonts}  % times is obsolete
+\usefonttheme[onlymath]{serif}
+\boldmath
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}                       % e.g. for DIN-A0 poster
+%\usepackage[orientation=portrait,size=a1,scale=1.4,grid,debug]{beamerposter}                  % e.g. for DIN-A1 poster, with optional grid and debug output
+%\usepackage[size=custom,width=200,height=120,scale=2,debug]{beamerposter}                     % e.g. for custom size poster
+%\usepackage[orientation=portrait,size=a0,scale=1.0,printer=rwth-glossy-uv.df]{beamerposter}   % e.g. for DIN-A0 poster with rwth-glossy-uv printer check
+% ...
+%
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\newlength{\columnheight}
+\setlength{\columnheight}{96cm} % ------------------------------- od jakiej wysokości mają zaczynać się klocki, ale też miejsce dla tytułu autorów, afiliacji
+\renewcommand{\thetable}{}
+\def\andname{,}
+\authornote{}
+
+\renewcommand{\APACrefatitle}[2]{}
+\renewcommand{\bibliographytypesize}{\footnotesize} 
+\renewcommand{\APACrefYearMonthDay}[3]{%
+  {\BBOP}{#1}
+  {\BBCP}
+}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+% Początek posteru
+%-------------------------------------------------------------------------------------------------------------------
+
+% -----------------------------------------------------------Autorzy, mail, afiliacje
+\date{}
+\author{\large Anna Lassota*, Jaros\l{}aw Chilimoniuk, Dominika Kozakiewicz, Joanna Sikorska, Pawe\l{} Mackiewicz, Dorota Mackiewicz, Micha\l{} Burdukiewicz\\
+\normaltext{*annalassota@smorfland.uni.wroc.pl}}
+\institute{University of Wroc\l{}aw, Department of Genomics
+}
+}
+
+
+\title{\huge Selective inhibition of biofilm-associated amyloids} % --------------------------------------------------------------Tytuł
+
+
+\begin{frame}
+\begin{columns}
+\begin{column}{.5\textwidth} %------------------------------------------------ szerokość kolumny lewej
+\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+\begin{minipage}[T]{.99\textwidth}
+\parbox[t][\columnheight]{\textwidth}
+{
+
+\begin{block}{Introduction}
+\justify Amyloid fibrils are heterogeneous proteins capable to self-assembly fibrous aggregates deposited in organs and tissues. These aggregates are associated with incurable degenerative illnesses such as Alzheimer{'}s (amyloid $\beta$) and Parkinson{'}s ($\alpha$-synuclein) disease. Amyloid fibrils are made of soluble proteins, however, amyloid fibers are insoluble and resistant to degradation. The curli system that occurs in enteric bacteria consists of self-assembling functional amyloid, CsgA. Functional amyloids occur in natural environment in many biological system and, in contrast to amyloids associated with disorders, they are tightly controlled. For example, CsgA is effectively inhibited by CsgC [1]. In addition, CsgC inhibits human $\alpha$-synuclein. CsgC possesses its functional homologues, such as CsgH [2] and transthyretin (TTR) [3], which also show antiamyloid activity despite completely different sequences. To check if there are significant differences among CsgA homologues and CsgC homologues, we carried out sequence comparisons. In addition, we compared CsgA and $\alpha$-synuclein as well as CsgC with its functional homologues, CsgH and TTR.
+\end{block}
+%\vfill % ------------------------------------------- Możecie zacommentować, zostawia puste miejsce, jeśli macie za mało tekstu doda większe przerwy
+
+%\begin{block}{Phylogenetic tree with sequences selected to multiple alignment}
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[trim={0 1cm 0 1cm},clip,width=1.1\columnwidth]{tree.pdf}
+%\end{figure}
+
+%\end{block}
+
+\vfill
+\begin{block}{Multiple sequence alignment of various species of CsgA and $\alpha$-synuclein} 
+
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-1} 
+
+\justify Repeated units from CsgA: R1, R3 and R5, are highlited on black. CsgAs and $\alpha$-synuclein sequences shared only a single common region (highlited on red), residues 104{:}112 in CsgA and residues 98{:}104 in $\alpha$-synuclein. If the region is modified in $\alpha$-synuclein, CsgC is unable to inhibit this protein.
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[width=0.85\columnwidth]{aln6.pdf}
+%\end{figure}
+\end{block}
+%\vfill
+
+\begin{block}{Multiple sequence alignment of various species of CsgC}
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-2-1} 
+
+\justify Motif CxC that is essential for the functioning of CsgC as an inhibitor is highlited on black.
+
+%\includegraphics[width=0.8\columnwidth]{aln2.pdf}
+%\end{figure}
+\end{block}
+}
+\end{minipage}
+\end{beamercolorbox}
+\end{column}
+
+
+%new column -------------------------------------------------------------------------------------------------    
+
+\begin{column}{.47\textwidth} % ----------------------------------------- szerokość kolumny prawej
+\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+\begin{minipage}[T]{.99\textwidth}  
+\parbox[t][\columnheight]{\textwidth}
+{
+
+
+
+\begin{block}{Pairwise sequence identity of CsgA and CsgC}
+
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
+
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[width=0.75\columnwidth]{pid3.pdf}
+%\end{figure}
+\justify Significant homologues were found only in closely related bacteria. Generally, CsgA and CsgC showed very similar pairwise sequence identity in corresponding pairs of bacteria with the exception of CsgC from \textit{Enterobacter hormaechei} which demonstrated much lower identity compared with other species.
+\end{block}
+\vfill
+
+
+\begin{block}{Multiple sequence alignment of CsgC functional homologues }
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-4-1} 
+
+\justify Motif CxC is highlited on black in CsgC. The alignment of curli inhibitors (CsgC, CsgH and TTR) showed no sequence similarity. The CxC motif, present in CsgC sequence and important in the inhibition of CsgA aggregation, does not exist in TTR and CsgH.
+%\includegraphics[width=0.95\columnwidth]{aln5.pdf}
+%\end{figure}
+\end{block}
+%\vfill
+
+
+\begin{block}{Conclusions}
+\justify CsgC and CsgA sequences exhibit similar level of sequence divergence in their homologues except for one species. Nevertheless, functional homologues of CsgC, CsgH and TTR show no sequence similarity between them. Knowing that all these proteins are able to inhibit CsgA, we can assume that inhibitory properties are not manifested in the primary sequence and must depend on three-dimensional structure.
+\end{block}
+%\vfill
+
+\begin{block}{Bibliography}
+\small{
+\justify 
+\textbf{[1]} Margery L. Evans, Erik Chorell, Jonathan D. Taylor, Jorgen Aden, Anna Gotheson, Fei Li, Marion Koch, Lea Sefer, Steve J. Matthews, Pernilla Wittung-Stafshede, Fredrik Almqvist, and Matthew R. Chapman, 2015. \textit{The bacterial curli system possesses a potent and selective inhibitor of amyloid formation.} 
+\\
+\textbf{[2]} Jonathan D. Taylor, William J. Hawthorne, Joanne Lo, Alexander Dear, Neha Jain, Georg Meisl, Maria Andreasen, Catherine Fletcher, Marion Koch, Nicholas Darvill, Nicola Scull, Andrés Escalera-Maurer, Lea Sefer, Rosemary Wenman, Sebastian Lambert, Jisoo Jean, Yingqi Xu, Benjamin Turner, Sergei G. Kazarian, Matthew R. Chapman, Doryen Bubeck, Alfonso de Simone, Tuomas P. J. Knowles, and Steve J. Matthews, 2016. \textit{Electrostatically-guided inhibition of Curli amyloid nucleation by the CsgC-like family of chaperones.} 
+\\
+\textbf{[3]} Neha Jain, Jörgen Ådén, Kanna Nagamatsu, Margery L. Evans, Xinyi Li, Brennan McMichael, Magdalena I. Ivanova, Fredrik Almqvist, Joel N. Buxbaum, and Matthew R. Chapman, 2017. \textit{Inhibition of curli assembly and Escherichia coli biofilm formation by the human systemic amyloid precursor transthyretin.}
+
+}
+
+\end{block}
+
+
+}
+\end{minipage}
+\end{beamercolorbox}
+\end{column}
+\end{columns}  
+\end{frame}
+\end{document}

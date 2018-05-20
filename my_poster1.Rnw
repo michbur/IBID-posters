@@ -1,0 +1,498 @@
+\documentclass[final]{beamer}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{epstopdf}
+\usepackage{multicol}
+\usepackage{ragged2e}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{grffile}
+\mode<presentation>{\usetheme{CambridgeUSPOL}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+% \usepackage{polski}
+\usepackage{graphicx}
+\usepackage{array,booktabs,tabularx}
+\usepackage{epstopdf}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colortbl}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+
+% rysunki
+\usepackage{tikz}
+\usepackage{ifthen}
+\usepackage{xxcolor}
+\usetikzlibrary{arrows}
+\usetikzlibrary[topaths]
+\usetikzlibrary{decorations.pathreplacing}
+%\usepackage{times}\usefonttheme{professionalfonts}  % times is obsolete
+\usefonttheme[onlymath]{serif}
+\boldmath
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}                       % e.g. for DIN-A0 poster
+%\usepackage[orientation=portrait,size=a1,scale=1.4,grid,debug]{beamerposter}                  % e.g. for DIN-A1 poster, with optional grid and debug output
+%\usepackage[size=custom,width=200,height=120,scale=2,debug]{beamerposter}                     % e.g. for custom size poster
+%\usepackage[orientation=portrait,size=a0,scale=1.0,printer=rwth-glossy-uv.df]{beamerposter}   % e.g. for DIN-A0 poster with rwth-glossy-uv printer check
+% ...
+%
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+\newlength{\columnheight}
+\setlength{\columnheight}{96cm} % ------------------------------- od jakiej wysokości mają zaczynać się klocki, ale też miejsce dla tytułu autorów, afiliacji
+\renewcommand{\thetable}{}
+\def\andname{,}
+\authornote{}
+
+\renewcommand{\APACrefatitle}[2]{}
+\renewcommand{\bibliographytypesize}{\footnotesize} 
+\renewcommand{\APACrefYearMonthDay}[3]{%
+  {\BBOP}{#1}
+  {\BBCP}
+}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+% Początek posteru
+%-------------------------------------------------------------------------------------------------------------------
+
+% -----------------------------------------------------------Autorzy, mail, afiliacje
+\date{}
+\author{\large Anna Lassota*, Jaros\l{}aw Chilimoniuk, Dominika Kozakiewicz, Joanna Sikorska, Pawe\l{} Mackiewicz, Dorota Mackiewicz, Micha\l{} Burdukiewicz\\
+\normaltext{*annalassota@smorfland.uni.wroc.pl}}
+\institute{University of Wroc\l{}aw, Department of Genomics
+}
+}
+
+
+\title{\huge Selective inhibition of biofilm-associated amyloids} % --------------------------------------------------------------Tytuł
+
+
+\begin{frame}
+\begin{columns}
+\begin{column}{.5\textwidth} %------------------------------------------------ szerokość kolumny lewej
+\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+\begin{minipage}[T]{.99\textwidth}
+\parbox[t][\columnheight]{\textwidth}
+{
+
+\begin{block}{Introduction}
+\justify Amyloid fibrils are heterogeneous proteins capable to self-assembly fibrous aggregates deposited in organs and tissues. These aggregates are associated with incurable degenerative illnesses such as Alzheimer{'}s (amyloid $\beta$) and Parkinson{'}s ($\alpha$-synuclein) disease. Amyloid fibrils are made of soluble proteins, however, amyloid fibers are insoluble and resistant to degradation. The curli system that occurs in enteric bacteria consists of self-assembling functional amyloid, CsgA. Functional amyloids occur in natural environment in many biological system and, in contrast to amyloids associated with disorders, they are tightly controlled. For example, CsgA is effectively inhibited by CsgC [1]. In addition, CsgC inhibits human $\alpha$-synuclein. CsgC possesses its functional homologues, such as CsgH [2] and transthyretin (TTR) [3], which also show antiamyloid activity despite completely different sequences. To check if there are significant differences among CsgA homologues and CsgC homologues, we carried out sequence comparisons. In addition, we compared CsgA and $\alpha$-synuclein as well as CsgC with its functional homologues, CsgH and TTR.
+\end{block}
+%\vfill % ------------------------------------------- Możecie zacommentować, zostawia puste miejsce, jeśli macie za mało tekstu doda większe przerwy
+
+%\begin{block}{Phylogenetic tree with sequences selected to multiple alignment}
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[trim={0 1cm 0 1cm},clip,width=1.1\columnwidth]{tree.pdf}
+%\end{figure}
+
+%\end{block}
+
+\vfill
+\begin{block}{Multiple sequence alignment of various species of CsgA and $\alpha$-synuclein} 
+<<echo=FALSE,results='asis',message=FALSE,error=FALSE,warning=FALSE,fig.width=15,fig.height=13.5>>=
+library(ggplot2)
+library(dplyr)
+
+# input file -----------------------------------
+all_lines <- readLines("csga.syn.aln")
+
+# number of facets
+n_facets <- 5
+
+# important regions ---------------------------------
+
+region_borders <- list(R1 = 43L:65, 
+                       #R2 = 66L:87,
+                       R3 = 88L:110,
+                       #R4 = 111L:132,
+                       R5 = 133L:151)
+
+# amino acid colors ---------------------------------
+
+alph_color_list <- list(list(col = "#8dd3c7", aa = c("G", "A", "S", "T")),
+                        list(col = "#ffffb3", aa = c("C", "V", "I", "L", "P", "F", "Y", "M", "W")),
+                        list(col = "#bebada", aa = c("N", "H", "Q")),
+                        list(col = "#fb8072", aa = c("D", "E")),
+                        list(col = "#80b1d3", aa = c("K", "R")),
+                        list(col = "white", aa = c("-")))
+
+reduced_alph <- lapply(alph_color_list, function(i) i[["aa"]])
+
+names(reduced_alph) <- c("Small nonpolar",
+                         "Hydrophobic",
+                         "Polar",
+                         "Negatively charged",
+                         "Positively charged",
+                         "Gap")
+
+cols <- sapply(alph_color_list, function(i) i[["col"]])
+
+# process alignment ---------------------------------
+
+prot_id <- cumsum(grepl("^>", all_lines))
+
+all_prots <- split(all_lines, prot_id)
+
+aln_dat <- lapply(all_prots, function(ith_prot) {
+  data.frame(species = sub("^>", "", ith_prot[1]),
+             aa = strsplit(paste0(ith_prot[-1], collapse = ""), "")[[1]],
+             stringsAsFactors = FALSE)
+}) %>% bind_rows() %>% 
+  #mutate(species = factor(species, levels = rev(c("Escherichia coli", "Citrobacter koseri", "Salmonella typhimurium", 
+  #                                                "Shewanella oneidensis")))) %>% 
+  group_by(species) %>% 
+  mutate(pos = 1L:length(species),
+         pos_disc = cut(pos, quantile(pos, probs = seq(from = 0, to = 1, length.out = n_facets + 1)), include.lowest = TRUE),
+         aa_groups = factor(biogram::degenerate(aa, reduced_alph),
+                            levels = names(reduced_alph)),
+         real_pos = cumsum(aa != "-"),
+         prone = real_pos %in% unlist(region_borders),
+         pos_prone = ifelse(prone, pos, NA),
+         pos_prone = ifelse(species == "E. coli", pos_prone, NA),
+         pos_prone = ifelse(aa != "-", pos_prone, NA),
+         csga = real_pos %in% 104L:112,
+         pos_csga = ifelse(csga, pos, NA),
+         pos_csga = ifelse(species == "E. coli", pos_csga, NA),
+         pos_csga = ifelse(aa != "-", pos_csga, NA),
+         assyn = real_pos %in% 98L:105,
+         pos_assyn = ifelse(assyn, pos, NA),
+         pos_assyn = ifelse(species == "Alpha-synuclein", pos_assyn, NA),
+         pos_assyn = ifelse(aa != "-", pos_assyn, NA))
+
+
+ggplot(aln_dat, aes(x = pos, y = species, label = aa, fill = aa_groups)) +
+  geom_tile(color = NA) +
+  facet_wrap(~ pos_disc, ncol = 1, scales = "free_x") +
+  geom_tile(aes(x = pos_prone), color = "black", fill = NA, size = 2) +
+  geom_tile(aes(x = pos_csga), color = "magenta", fill = NA, size = 2) +
+  geom_tile(aes(x = pos_assyn), color = "magenta", fill = NA, size = 2) +
+  #geom_text(size = 2.1, family = "Courier", fontface="bold") +
+  geom_text(size = 6.5)  +
+  scale_x_continuous("Position", expand = c(0, 0)) +
+  scale_y_discrete("") +
+  scale_fill_manual("", values = cols) +
+  guides(fill = guide_legend(nrow = 1, byrow = TRUE, override.aes = list(color = "black", size = 1.4))) + 
+  theme_bw(base_size = 24) +
+  theme(legend.position = "bottom",
+        legend.key.size = unit(2.5, "lines"),
+        strip.background = element_blank(),
+        strip.text.x = element_blank())
+@
+\justify Repeated units from CsgA: R1, R3 and R5, are highlited on black. CsgAs and $\alpha$-synuclein sequences shared only a single common region (highlited on red), residues 104{:}112 in CsgA and residues 98{:}104 in $\alpha$-synuclein. If the region is modified in $\alpha$-synuclein, CsgC is unable to inhibit this protein.
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[width=0.85\columnwidth]{aln6.pdf}
+%\end{figure}
+\end{block}
+%\vfill
+
+\begin{block}{Multiple sequence alignment of various species of CsgC}
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+<<echo=FALSE,results='asis',message=FALSE,error=FALSE,warning=FALSE,fig.width=15,fig.height=12>>=
+library(ggplot2)
+library(dplyr)
+
+# input file -----------------------------------
+all_lines <- readLines("CsgC_sekwencje.fasta.aln")
+
+# number of facets
+n_facets <- 5
+
+# important regions ---------------------------------
+
+region_borders <- list(R1 = 37L:39)
+
+# amino acid colors ---------------------------------
+
+alph_color_list <- list(list(col = "#8dd3c7", aa = c("G", "A", "S", "T")),
+                        list(col = "#ffffb3", aa = c("C", "V", "I", "L", "P", "F", "Y", "M", "W")),
+                        list(col = "#bebada", aa = c("N", "H", "Q")),
+                        list(col = "#fb8072", aa = c("D", "E")),
+                        list(col = "#80b1d3", aa = c("K", "R")),
+                        list(col = "white", aa = c("-")))
+
+reduced_alph <- lapply(alph_color_list, function(i) i[["aa"]])
+
+names(reduced_alph) <- c("Small nonpolar",
+                         "Hydrophobic",
+                         "Polar",
+                         "Negatively charged",
+                         "Positively charged",
+                         "Gap")
+
+cols <- sapply(alph_color_list, function(i) i[["col"]])
+
+# process alignment ---------------------------------
+
+prot_id <- cumsum(grepl("^>", all_lines))
+
+all_prots <- split(all_lines, prot_id)
+
+aln_dat <- lapply(all_prots, function(ith_prot) {
+  data.frame(species = sub("^>", "", ith_prot[1]),
+             aa = strsplit(paste0(ith_prot[-1], collapse = ""), "")[[1]],
+             stringsAsFactors = FALSE)
+}) %>% bind_rows() %>% 
+  #mutate(species = factor(species, levels = rev(c("Escherichia coli", "Citrobacter koseri", "Salmonella typhimurium", 
+  #                                                "Shewanella oneidensis")))) %>% 
+  group_by(species) %>% 
+  mutate(pos = 1L:length(species),
+         pos_disc = cut(pos, quantile(pos, probs = seq(from = 0, to = 1, length.out = n_facets + 1)), include.lowest = TRUE),
+         aa_groups = factor(biogram::degenerate(aa, reduced_alph),
+                            levels = names(reduced_alph)),
+         real_pos = cumsum(aa != "-"),
+         prone = real_pos %in% 37L:39,
+         pos_prone = ifelse(prone, pos, NA),
+         pos_prone = ifelse(species == "E. coli", pos_prone, NA),
+         pos_prone = ifelse(aa != "-", pos_prone, NA))
+
+ggplot(aln_dat, aes(x = pos, y = species, label = aa, fill = aa_groups)) +
+  geom_tile(color = NA) +
+  facet_wrap(~ pos_disc, ncol = 1, scales = "free_x") +
+  geom_tile(aes(x = pos_prone), color = "black", fill = NA, size = 2) +
+  #geom_text(size = 2.1, family = "Courier", fontface="bold") +
+  geom_text(size = 7.1)  +
+  scale_x_continuous("Position", expand = c(0, 0)) +
+  scale_y_discrete("") +
+  scale_fill_manual("", values = cols) +
+  guides(fill = guide_legend(nrow = 1, byrow = TRUE, override.aes = list(color = "black", size = 1.4))) + 
+  theme_bw(base_size = 24) +
+  theme(legend.position = "bottom",
+        legend.key.size = unit(2.5, "lines"),
+        strip.background = element_blank(),
+        strip.text.x = element_blank())
+@
+\justify Motif CxC that is essential for the functioning of CsgC as an inhibitor is highlited on black.
+
+%\includegraphics[width=0.8\columnwidth]{aln2.pdf}
+%\end{figure}
+\end{block}
+}
+\end{minipage}
+\end{beamercolorbox}
+\end{column}
+
+
+%new column -------------------------------------------------------------------------------------------------    
+
+\begin{column}{.47\textwidth} % ----------------------------------------- szerokość kolumny prawej
+\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+\begin{minipage}[T]{.99\textwidth}  
+\parbox[t][\columnheight]{\textwidth}
+{
+
+
+
+\begin{block}{Pairwise sequence identity of CsgA and CsgC}
+<<echo=FALSE,results='asis',message=FALSE,error=FALSE,warning=FALSE,fig.width=14,fig.height=11>>=
+library(dplyr)
+library(ggplot2)
+library(reshape2)
+
+compute_pid <- function(file) {
+  all_lines <- readLines(file)
+  
+  all_prots <- split(all_lines, cumsum(grepl("^>", all_lines)))
+  
+  all_prots <- all_prots[order(sapply(all_prots, first))]
+  
+  splitted_seqs <- sapply(all_prots, function(i) paste0(i[-1], collapse = "")) %>% 
+    strsplit("")
+  
+  lapply(combn(1L:length(all_prots), 2, simplify = FALSE), function(i) {
+    pid <- data.frame(S1 = splitted_seqs[[i[1]]], S2 = splitted_seqs[[i[2]]], stringsAsFactors = FALSE) %>% 
+      filter(S1 != "-", S2 != "-") %>% 
+      mutate(ident = S1 == S2) %>% 
+      summarise(ident = mean(ident)) %>% 
+      unlist %>% 
+      unname()
+    
+    data.frame(S1 = all_prots[[i[1]]][[1]],
+               S2 = all_prots[[i[2]]][[1]],
+               pid = pid)
+  }) %>% 
+    do.call(rbind, .)
+}
+
+pid_data <- rbind(compute_pid("csga.syn.aln") %>% 
+                    mutate(protein = "CsgA"),
+                  compute_pid("CsgC_sekwencje.fasta.aln") %>% 
+                    mutate(protein = "CsgC")) %>% 
+  mutate(S1 = sub(">", "", S1),
+         S2 = sub(">", "", S2))
+
+ggplot(pid_data, aes(x = S1, y = S2, fill = pid, label = round(pid, 2))) +
+  geom_tile(color = "black") +
+  geom_text(color = "white", size = 8) +
+  scale_y_discrete("") +
+  scale_x_discrete("") +
+  scale_fill_continuous("Pairwise sequence identity") +
+  guides(fill = guide_colorbar(barwidth = 30, barheight = 2)) +
+  facet_wrap(~ protein) +
+  theme_bw(base_size = 24) + 
+  theme(axis.text.x = element_text(angle = 80, hjust = 1),
+        legend.position = "bottom")
+
+@
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+%\includegraphics[width=0.75\columnwidth]{pid3.pdf}
+%\end{figure}
+\justify Significant homologues were found only in closely related bacteria. Generally, CsgA and CsgC showed very similar pairwise sequence identity in corresponding pairs of bacteria with the exception of CsgC from \textit{Enterobacter hormaechei} which demonstrated much lower identity compared with other species.
+\end{block}
+\vfill
+
+
+\begin{block}{Multiple sequence alignment of CsgC functional homologues }
+%\begin{figure} %--------------------------------------------------jak dodać figurę do posteru
+<<echo=FALSE,results='asis',message=FALSE,error=FALSE,warning=FALSE,fig.width=14.2,fig.height=10>>=
+library(ggplot2)
+library(dplyr)
+
+# input file -----------------------------------
+all_lines <- readLines("csgc.ttr.csgh.aln.txt")
+
+# number of facets
+n_facets <- 4
+
+# important regions ---------------------------------
+
+region_borders <- list(R1 = 37L:39)
+
+# amino acid colors ---------------------------------
+
+alph_color_list <- list(list(col = "#8dd3c7", aa = c("G", "A", "S", "T")),
+                        list(col = "#ffffb3", aa = c("C", "V", "I", "L", "P", "F", "Y", "M", "W")),
+                        list(col = "#bebada", aa = c("N", "H", "Q")),
+                        list(col = "#fb8072", aa = c("D", "E")),
+                        list(col = "#80b1d3", aa = c("K", "R")),
+                        list(col = "white", aa = c("-")))
+
+reduced_alph <- lapply(alph_color_list, function(i) i[["aa"]])
+
+names(reduced_alph) <- c("Small nonpolar",
+                         "Hydrophobic",
+                         "Polar",
+                         "Negatively charged",
+                         "Positively charged",
+                         "Gap")
+
+cols <- sapply(alph_color_list, function(i) i[["col"]])
+
+# process alignment ---------------------------------
+
+prot_id <- cumsum(grepl("^>", all_lines))
+
+all_prots <- split(all_lines, prot_id)
+
+# lapply(all_prots, function(ith_prot) {
+#   paste0(ith_prot[-1], collapse = "")
+# }) %>% 
+#   regexpr(pattern = "C", text = .)
+
+aln_dat <- lapply(all_prots, function(ith_prot) {
+  data.frame(species = sub("^>", "", ith_prot[1]),
+             aa = strsplit(paste0(ith_prot[-1], collapse = ""), "")[[1]],
+             stringsAsFactors = FALSE)
+}) %>% bind_rows() %>% 
+  #mutate(species = factor(species, levels = rev(c("Escherichia coli", "Citrobacter koseri", "Salmonella typhimurium", 
+  #                                                "Shewanella oneidensis")))) %>% 
+  group_by(species) %>% 
+  mutate(pos = 1L:length(species),
+         pos_disc = cut(pos, quantile(pos, probs = seq(from = 0, to = 1, length.out = n_facets + 1)), include.lowest = TRUE),
+         aa_groups = factor(biogram::degenerate(aa, reduced_alph),
+                            levels = names(reduced_alph)),
+         real_pos = cumsum(aa != "-"),
+         prone = real_pos %in% 37L:39,
+         pos_prone = ifelse(prone, pos, NA),
+         pos_prone = ifelse(species == "CsgC", pos_prone, NA),
+         pos_prone = ifelse(aa != "-", pos_prone, NA))
+
+ggplot(aln_dat, aes(x = pos, y = species, label = aa, fill = aa_groups)) +
+  geom_tile(color = NA) +
+  facet_wrap(~ pos_disc, ncol = 1, scales = "free_x") +
+  geom_tile(aes(x = pos_prone), color = "black", fill = NA, size = 2) +
+  #geom_text(size = 2.1, family = "Courier", fontface="bold") +
+  geom_text(size = 7.1)  +
+  scale_x_continuous("Position", expand = c(0, 0)) +
+  scale_y_discrete("") +
+  scale_fill_manual("", values = cols) +
+  guides(fill = guide_legend(nrow = 1, byrow = TRUE, override.aes = list(color = "black", size = 1.4))) + 
+  theme_bw(base_size = 24) +
+  theme(legend.position = "bottom",
+        legend.key.size = unit(2.5, "lines"),
+        strip.background = element_blank(),
+        strip.text.x = element_blank())
+@
+\justify Motif CxC is highlited on black in CsgC. The alignment of curli inhibitors (CsgC, CsgH and TTR) showed no sequence similarity. The CxC motif, present in CsgC sequence and important in the inhibition of CsgA aggregation, does not exist in TTR and CsgH.
+%\includegraphics[width=0.95\columnwidth]{aln5.pdf}
+%\end{figure}
+\end{block}
+%\vfill
+
+
+\begin{block}{Conclusions}
+\justify CsgC and CsgA sequences exhibit similar level of sequence divergence in their homologues except for one species. Nevertheless, functional homologues of CsgC, CsgH and TTR show no sequence similarity between them. Knowing that all these proteins are able to inhibit CsgA, we can assume that inhibitory properties are not manifested in the primary sequence and must depend on three-dimensional structure.
+\end{block}
+%\vfill
+
+\begin{block}{Bibliography}
+\small{
+\justify 
+\textbf{[1]} Margery L. Evans, Erik Chorell, Jonathan D. Taylor, Jorgen Aden, Anna Gotheson, Fei Li, Marion Koch, Lea Sefer, Steve J. Matthews, Pernilla Wittung-Stafshede, Fredrik Almqvist, and Matthew R. Chapman, 2015. \textit{The bacterial curli system possesses a potent and selective inhibitor of amyloid formation.} 
+\\
+\textbf{[2]} Jonathan D. Taylor, William J. Hawthorne, Joanne Lo, Alexander Dear, Neha Jain, Georg Meisl, Maria Andreasen, Catherine Fletcher, Marion Koch, Nicholas Darvill, Nicola Scull, Andrés Escalera-Maurer, Lea Sefer, Rosemary Wenman, Sebastian Lambert, Jisoo Jean, Yingqi Xu, Benjamin Turner, Sergei G. Kazarian, Matthew R. Chapman, Doryen Bubeck, Alfonso de Simone, Tuomas P. J. Knowles, and Steve J. Matthews, 2016. \textit{Electrostatically-guided inhibition of Curli amyloid nucleation by the CsgC-like family of chaperones.} 
+\\
+\textbf{[3]} Neha Jain, Jörgen Ådén, Kanna Nagamatsu, Margery L. Evans, Xinyi Li, Brennan McMichael, Magdalena I. Ivanova, Fredrik Almqvist, Joel N. Buxbaum, and Matthew R. Chapman, 2017. \textit{Inhibition of curli assembly and Escherichia coli biofilm formation by the human systemic amyloid precursor transthyretin.}
+
+}
+
+\end{block}
+
+
+}
+\end{minipage}
+\end{beamercolorbox}
+\end{column}
+\end{columns}  
+\end{frame}
+\end{document}
